@@ -1,0 +1,22 @@
+<div class="container mt-3 d-flex">
+  <% if (locals.user) { %>
+  <form class="d-flex me-4" action="/blog/favourites" , method="post">
+    <button class="d-flex btn btn-info me-2" type="submit">
+      Favorite Blogs
+    </button>
+  </form>
+  <% } %>
+  <form class="d-flex me-4" action="/blog/show" , method="post">
+    <button class="btn btn-info ms-2 me-2" type="submit">Sort by title</button>
+  </form>
+  <form class="d-flex ms-4" action="/blog" , method="get">
+    <input
+      class="form-control ms-4 col-md-4"
+      type="search"
+      placeholder="Search Blog by Category"
+      aria-label="Search"
+      name="category"
+    />
+    <button class="btn btn-info ms-2" type="submit">Search</button>
+  </form>
+</div>
